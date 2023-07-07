@@ -23,23 +23,6 @@
                     "all"
                 ]
             },
-            "osx": {
-                "args": [
-                    "PROJECT_NAME=${config:projectName}",
-                    "OBJS=*.cpp",
-                    "BUILD_MODE=DEBUG"
-                ]
-            },
-            "linux": {
-                "args": [
-                    "PROJECT_NAME=${config:projectName}",
-                    "DESTDIR=/home/linuxbrew/.linuxbrew",
-                    "RAYLIB_LIBTYPE=SHARED",
-                    "EXAMPLE_RUNTIME_PATH=/home/linuxbrew/.linuxbrew/lib",
-                    "OBJS=*.cpp",
-                    "BUILD_MODE=DEBUG"
-                ]
-            },
             "group": "build",
             "problemMatcher": [
                 "$gcc"
@@ -61,21 +44,6 @@
                     "OBJS=*.cpp",
                     "clean",
                     "all"
-                ]
-            },
-            "osx": {
-                "args": [
-                    "PROJECT_NAME=${config:projectName}",
-                    "OBJS=*.cpp"
-                ]
-            },
-            "linux": {
-                "args": [
-                    "PROJECT_NAME=${config:projectName}",
-                    "DESTDIR=/home/linuxbrew/.linuxbrew",
-                    "RAYLIB_LIBTYPE=SHARED",
-                    "EXAMPLE_RUNTIME_PATH=/home/linuxbrew/.linuxbrew/lib",
-                    "OBJS=*.cpp"
                 ]
             },
             "problemMatcher": [
