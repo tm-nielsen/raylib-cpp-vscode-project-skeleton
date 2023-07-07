@@ -1,4 +1,11 @@
 {
+	// Avoid using spaces in project name,
+	// as it will cause make to run once per word
+	"projectName": "project-skeleton",
+
+	"mingwBinPath": "C:/ProgramData/chocolatey/bin",
+	"raylibPath": "../raylib",
+
 	"files.exclude": {
 		"**/.git": true,
 		"**/.svn": true,

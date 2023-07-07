@@ -12,10 +12,11 @@
                 "BUILD_MODE=DEBUG"
             ],
             "windows": {
-                "command": "C:/ProgramData/chocolatey/bin/mingw32-make.exe",
+                "command": "${config:mingwBinPath}/mingw32-make.exe",
                 "args": [
-                    "RAYLIB_PATH=../raylib",
-                    "PROJECT_NAME=${workspaceFolderBasename}",
+                    "COMPILER_PATH=${config.compilerPath}",
+                    "RAYLIB_PATH=${config:raylibPath}",
+                    "PROJECT_NAME=${config:projectName}",
                     "OBJS=*.cpp",
                     "BUILD_MODE=DEBUG",
                     "clean",
@@ -24,14 +25,14 @@
             },
             "osx": {
                 "args": [
-                    "PROJECT_NAME=${workspaceFolderBasename}",
+                    "PROJECT_NAME=${config:projectName}",
                     "OBJS=*.cpp",
                     "BUILD_MODE=DEBUG"
                 ]
             },
             "linux": {
                 "args": [
-                    "PROJECT_NAME=${workspaceFolderBasename}",
+                    "PROJECT_NAME=${config:projectName}",
                     "DESTDIR=/home/linuxbrew/.linuxbrew",
                     "RAYLIB_LIBTYPE=SHARED",
                     "EXAMPLE_RUNTIME_PATH=/home/linuxbrew/.linuxbrew/lib",
@@ -52,10 +53,11 @@
                 "PLATFORM=PLATFORM_DESKTOP"
             ],
             "windows": {
-                "command": "C:/ProgramData/chocolatey/bin/mingw32-make.exe",
+                "command": "${config:mingwBinPath}/mingw32-make.exe",
                 "args": [
-                    "RAYLIB_PATH=../raylib",
-                    "PROJECT_NAME=${input:projectName}",
+                    "COMPILER_PATH=${config.compilerPath}",
+                    "RAYLIB_PATH=${config:raylibPath}",
+                    "PROJECT_NAME=${config:projectName}",
                     "OBJS=*.cpp",
                     "clean",
                     "all"
@@ -63,13 +65,13 @@
             },
             "osx": {
                 "args": [
-                    "PROJECT_NAME=${workspaceFolderBasename}",
+                    "PROJECT_NAME=${config:projectName}",
                     "OBJS=*.cpp"
                 ]
             },
             "linux": {
                 "args": [
-                    "PROJECT_NAME=${workspaceFolderBasename}",
+                    "PROJECT_NAME=${config:projectName}",
                     "DESTDIR=/home/linuxbrew/.linuxbrew",
                     "RAYLIB_LIBTYPE=SHARED",
                     "EXAMPLE_RUNTIME_PATH=/home/linuxbrew/.linuxbrew/lib",
@@ -83,15 +85,7 @@
                 "kind": "build",
                 "isDefault": true
             },
-            "detail": "compiler: C:/ProgramData/chocolatey/bin/g++.exe"
-        }
-    ],
-    "inputs": [
-        {
-            "id": "projectName",
-            "default": "project",
-            "type": "promptString",
-            "description": "Name the release build",
+            "detail": "compiler: ${config:mingwBinPath}/g++.exe"
         }
     ]
 }

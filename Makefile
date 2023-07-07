@@ -21,7 +21,7 @@
 #
 #**************************************************************************************************
 
-# Edited to use cpp, handle project name with spaces, and ignore resource file
+# Edited to use cpp, (kind of) handle project name with spaces, and ignore resource file
 
 .PHONY: all clean
 
