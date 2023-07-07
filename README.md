@@ -1,5 +1,7 @@
 # VSCode project skeleton for raylib c++ projects
 
+based on [the official template](https://github.com/raysan5/raylib/tree/master/projects/VSCode)
+
 ### Dependencies
 
 - [Raylib](https://www.raylib.com/)
