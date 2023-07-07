@@ -17,4 +17,6 @@ By default, the project is set up to use a chocolatey install of MinGW and a rel
 To fix Intellisense, the `compilerPath` and `includePath` of [c_cpp_properties.json](.vscode/settings.json) must be updated
 
 ## Getting Raylib to work on Windows
+The provided makefile is set up to use [the raylib source](https://github.com/raysan5/raylib/releases/tag/4.5.0)
+
 If you recieve the following error: `ld.exe cannot find -lraylib`, you need to [compile your raylib source directory into a library file.](https://github.com/raysan5/raylib/wiki/Working-on-Windows#build-raylib-using-make)
